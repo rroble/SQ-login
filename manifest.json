@@ -1,0 +1,23 @@
+{
+    "name": "SQ2 auto login",
+    "description": "",
+    "version": "0.1",
+    "permissions": [
+        "https://arcanys.atlassian.net/",
+        "https://status-quo.arcanys.com/"
+    ],
+    "manifest_version": 2,
+    "content_scripts": [
+        {
+            "matches": [
+                "https://arcanys.atlassian.net/plugins/servlet/ac/com.arcanys.statusquo/statusquo?project.key=HEL&project.id=17901",
+                "https://status-quo.arcanys.com/auth*"
+            ],
+            "js": [
+                "jquery-1.11.1.min.js",
+                "main.js"
+            ],
+            "all_frames": true
+        }
+    ]
+}
